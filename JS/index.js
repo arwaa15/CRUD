@@ -14,21 +14,21 @@ if (localStorage.getItem('product') != null) {
 }
 function AddProduct() {
     //if(validateproduct()==true){
-        var product = {
-            mark: productNameInput.value,
-            price: productPriceInput.value,
-            catagery: productCatageryInput.value,
-            desc: productDescraptionInput.value
-        }
+    var product = {
+        mark: productNameInput.value,
+        price: productPriceInput.value,
+        catagery: productCatageryInput.value,
+        desc: productDescraptionInput.value
+    }
 
-        productcotainer.push(product);
-        localStorage.setItem('product', JSON.stringify(productcotainer));
-        displayproduct(productcotainer);
-        clearform(); 
-//     }
-//    else{
-//     alert('Poduct Name Valid')
-//    }
+    productcotainer.push(product);
+    localStorage.setItem('product', JSON.stringify(productcotainer));
+    displayproduct(productcotainer);
+    clearform();
+    //     }
+    //    else{
+    //     alert('Poduct Name Valid')
+    //    }
 }
 
 function clearform() {
@@ -69,7 +69,7 @@ function searchProduct(term) {
     for (var i = 0; i < productcotainer.length; i++) {
         if (productcotainer[i].mark.toLowerCase().includes(term.toLowerCase())) {
 
-            matchProduct.push( productcotainer[i]);
+            matchProduct.push(productcotainer[i]);
         }
 
 
@@ -78,13 +78,11 @@ function searchProduct(term) {
     displayproduct(matchProduct);
 }
 
-function workUpdate(i){
-    addbtn.classList.replace('d-block','d-none');
-    apdatebtn.classList.replace('d-none','d-block');
-    productNameInput.value =productcotainer[i].mark;
-    productPriceInput.value =productcotainer[i].price;
-    productCatageryInput.value  =productcotainer[i].catagery;
-    productDescraptionInput.value=productcotainer[i].desc;
+function workUpdate(i) {
+    addbtn.classList.replace('d-block', 'd-none');
+    apdatebtn.classList.replace('d-none', 'd-block');
+    productNameInput.value = productcotainer[i].mark;
+    productPriceInput.value = productcotainer[i].price;
+    productCatageryInput.value = productcotainer[i].catagery;
+    productDescraptionInput.value = productcotainer[i].desc;
 }
-
-
