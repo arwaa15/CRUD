@@ -87,23 +87,4 @@ function workUpdate(i){
     productDescraptionInput.value=productcotainer[i].desc;
 }
 
-function validateproduct(){
-     var regex= /^[a-z][A-Z]{3,8}$/;
-     return regex.test(productNameInput.value)
-}
 
-
- 
-function User(Name , Age ,  Gender ,Salary) {
-
-this.name= Name;
-this.age = Age;
-this.gender = Gender;
-this.salary =Salary;
-}
-User.prototype.login = function(userName,password){
-    console.log('loing');
-}
-User.prototype.hello = function(userName){
-    console.log('hello');
-}
